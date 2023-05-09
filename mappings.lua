@@ -12,7 +12,7 @@ M.all = {
       function()
         vim.lsp.buf.code_action()
       end,
-      "Show available code actions"
+      "Show available code actions",
     }
   },
   i = {

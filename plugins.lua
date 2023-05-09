@@ -36,13 +36,23 @@ local plugins = {
       return require "custom.configs.nvimtree"
     end,
   },
-  { 
+  {
     "stevearc/dressing.nvim",
     init = function() require("custom.utils").load_plugin_with_func("dressing.nvim", vim.ui, { "input", "select" }) end,
-    opts = function() 
+    opts = function()
       return require "custom.configs.dressing"
     end
   },
+  {
+    "tpope/vim-fugitive",
+    cmd = {"G", "Git"}
+  },
+
+  -- trouble will let us create a "problems" split like in phpstorm
+  -- it will make it easier to surface intelephense & phpcs (& phpstan in the future) issues 
+  -- {
+  --   "folke/trouble.nvim"
+  -- }
 
   -- Ideally a task runner would be cool, simmilar to Cmd-S-a in phpstorm or Cmd-S-p in vscode
   -- We would want to be able to run both vim, lua and also cli jobs here
