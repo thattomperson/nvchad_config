@@ -44,6 +44,7 @@ config.sort_by = sort_by
 -- Show git status of files
 config.git.enable = true
 config.renderer.icons.show.git = true
+config.renderer.icons.glyphs.git.ignored = ''
 config.renderer.highlight_git = true
 
 return config;

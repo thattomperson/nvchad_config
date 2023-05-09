@@ -2,6 +2,18 @@ local M = {}
 
 M.all = {
   n = {
+    ["<leader>gA"] = {
+      function()
+        require("gitsigns").stage_buffer()
+      end,
+      "Stage buffer",
+    },
+    ["<leader>la"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "Show available code actions"
+    }
   },
   i = {
   },
